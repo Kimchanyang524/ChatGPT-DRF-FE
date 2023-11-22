@@ -38,7 +38,7 @@ write.addEventListener('click', (e) => {
     }
     console.log(data)
     const token = localStorage.getItem('token')
-
+    
     // if (token) {
     //     // fetch를 이용해서 서버에 POST 요청을 보낸다.
     //     fetch('http://127.0.0.1:8000/accounts/', {
