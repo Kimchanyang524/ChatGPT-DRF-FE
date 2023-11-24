@@ -44,11 +44,29 @@
                 <img src="/Image/abc-3523453_1280.jpg" alt="" class="rounded m-14" style="height: 350px; margin: 20px;">
             </div>
             <div class="d-flex justify-content-center">
-                <div class="row">
-                    <div>문제를 풀어봅시다.</div>
-                    <button id="quiz" class="btn btn btn-outline-primary">문제풀러가기</button>
-                    <div class="test"></div>
+                <div class="col"></div>
+                <div class="col-md-4">
+                    <form action="http://43.202.63.204:8000/dj-rest-auth/login/" method="post">
+                        <div class="mb-3 mt-3">
+                            <label for="username" class="form-label input-group">
+                                <span class="input-group-text col-md-4">아이디</span>
+                                <input type="text" id="username" name="username" class="form-control"
+                                    placeholder="아이디를 입력해주세요">
+                            </label>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label input-group">
+                                <span class="input-group-text col-md-4">비밀번호</span>
+                                <input type="password" id="password" name="password" class="form-control"
+                                    placeholder="비밀번호를 입력해주세요">
+                            </label>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <button type="submit" class="btn btn btn-outline-primary" id="login">로그인</button>
+                        </div>
+                    </form>
                 </div>
+                <div class="col"></div>
             </div>
         </div>
         <footer data-include-file="./footer.html" class="footer-wrap includeJs"></footer>
@@ -56,5 +74,5 @@
     <!-- script -->
     <script src="/JavaScript/base.js"></script>
     <script src="/JavaScript/header.js"></script>
-    <script src="/JavaScript/main.js"></script>
+    <script src="/JavaScript/login.js"></script>
 </html>
