@@ -14,31 +14,18 @@
 
         <!-- style -->
         <link rel="stylesheet" href="/CSS/footer.css">
+
+        <!-- base script -->
+        <script src="/JavaScript/base.js"></script>
+        <script src="/JavaScript/header.js"></script>
+        <script src="/JavaScript/logout.js"></script>
+
+        <!-- personal scritp -->
+        <script src="/JavaScript/login.js"></script>
     </head>
 
     <body>
-        <header data-include-file="./header.html" class="header-wrap includeJs"></header>
-        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-            <div class="container-fluid d-flex justify-content-around">
-                <a class="navbar-brand" href="javascript:void(0)">
-                    <i class="fa-solid fa-house" style="color: #ffffff;"></i>
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="d-flex" id="mynavbar">
-                    <ul class="navbar-nav me-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="javascript:void(0)">퀴즈</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="javascript:void(0)">기록</a>
-                        </li>
-                        <li class="nav-item" id="sign"></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        <header data-include-file="./include/header.html" class="header-wrap includeJs"></header>
         <div class="container">
             <div class="d-flex justify-content-center">
                 <img src="/Image/abc-3523453_1280.jpg" alt="" class="rounded m-14" style="height: 350px; margin: 20px;">
@@ -69,10 +56,6 @@
                 <div class="col"></div>
             </div>
         </div>
-        <footer data-include-file="./footer.html" class="footer-wrap includeJs"></footer>
+        <footer data-include-file="./include/footer.html" class="footer-wrap includeJs"></footer>
     </body>
-    <!-- script -->
-    <script src="/JavaScript/base.js"></script>
-    <script src="/JavaScript/header.js"></script>
-    <script src="/JavaScript/login.js"></script>
 </html>
