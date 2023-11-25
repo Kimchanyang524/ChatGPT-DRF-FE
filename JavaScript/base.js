@@ -1,23 +1,11 @@
-(function () {
-    function includeHtml() {
-        const includeTarget = document.querySelectorAll(".includeJs");
-        includeTarget.forEach(function (el, idx) {
-            const targetFile = el.dataset.includeFile;
-            if (targetFile) {
-                let xhttp = new XMLHttpRequest();
+const script1 = document.createElement('script');
+script1.src = '/JavaScript/include.js';
+document.head.appendChild(script1);
 
-                xhttp.onreadystatechange = function () {
-                    if (this.readyState === XMLHttpRequest.DONE) {
-                        this.status === 200 ? (el.innerHTML = this.responseText) : null;
-                        this.status === 404 ? (el.innerHTML = "include not found.") : null;
-                    }
-                };
-                xhttp.open("GET", targetFile, true);
-                xhttp.send();
-                return;
-            }
-        });
-    }
+const script2 = document.createElement('script');
+script2.src = '/JavaScript/header.js';
+document.head.appendChild(script2);
 
-    includeHtml();
-})();
+const script3 = document.createElement('script');
+script3.src = '/JavaScript/logout.js';
+document.head.appendChild(script3);
