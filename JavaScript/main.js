@@ -19,7 +19,7 @@ quiz.addEventListener('click', () => {
             })
     } else {
         alert('로그인이 필요합니다.')
-        document.location.href = "http://43.200.125.52/accounts/login"
+        window.location.href = "http://43.200.125.52/accounts/login"
     }
 })
 
