@@ -1,5 +1,6 @@
-(function updateSign() {
+(function updateHeader() {
     const sign = document.querySelector('#sign');
+    const register = document.querySelector('#register');
     const token = sessionStorage.getItem('token');
     let temp = 0
 
@@ -7,11 +8,12 @@
         if (token) {
             sign.innerHTML = `<button class="nav-link" onclick="logout()"><i class="fa-solid fa-right-from-bracket"></i></button>`;
         } else {
+            register.innerHTML = `<a class="nav-link" href="/accounts/register"><i class="fa-solid fa-user-plus"></i></a>`;
             sign.innerHTML = `<a class="nav-link" href="/accounts/login"><i class="fa-solid fa-right-to-bracket"></i></a>`;
         }
     } else {
         temp++
         console.log(temp + '회 실패')
-        setTimeout(updateSign, 100);
+        setTimeout(updateHeader, 100);
     }
 })()

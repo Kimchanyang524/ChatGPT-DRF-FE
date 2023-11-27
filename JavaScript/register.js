@@ -22,7 +22,7 @@ login.addEventListener('click', (e) => {
     }
 
     // fetch를 이용해서 서버에 POST 요청을 보낸다.
-    fetch('http://13.209.138.142:8000/accounts/login/', {
+    fetch('http://13.209.138.142:8000/accounts/register/', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -31,17 +31,9 @@ login.addEventListener('click', (e) => {
     })
         .then(response => response.json())
         .then(data => {
-            console.log(data)
-            if (data.access_token) {
-                sessionStorage.setItem('token', data.access_token)
-                sessionStorage.setItem('csrftoken', data.csrftoken)
-                alert(data.message)
-            } else {
-                alert(data.message)
-            }
             window.location.href = "http://43.200.125.52/"
         })
         .catch(error => {
-            console.error('로그인 중 오류 발생:', error);
+            console.error('회원가입 중 오류 발생:', error);
         });
 })
