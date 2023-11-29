@@ -14,7 +14,7 @@ submit.addEventListener('click', function () {
     } else {
         alert('오답입니다! 정답은 ' + correct + '입니다!')
     }
-    fetch('http://13.209.138.142:8000/quiz/list/', {
+    fetch('http://13.209.138.142:8000/quiz/chat/', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -41,7 +41,7 @@ submit.addEventListener('click', function () {
 })
 
 function nextquiz() {
-    fetch('http://13.209.138.142:8000/quiz/list/', {
+    fetch('http://13.209.138.142:8000/quiz/chat/', {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
