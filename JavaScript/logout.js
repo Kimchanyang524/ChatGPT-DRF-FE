@@ -1,9 +1,11 @@
 function logout() {
     const logoutConfirm = confirm('정말로 로그아웃 하시겠습니까?')
+    const access = sessionStorage.getItem('access')
     if (logoutConfirm) {
         fetch('http://13.209.138.142:8000/accounts/auth/', {
             method: 'DELETE',
             headers: {
+                'Authorization': `Bearer ${access}`,
                 'Content-Type': 'application/json',
             }
         })

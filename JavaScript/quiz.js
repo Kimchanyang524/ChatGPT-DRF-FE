@@ -17,10 +17,10 @@ submit.addEventListener('click', function () {
     fetch('http://13.209.138.142:8000/quiz/chat/', {
         method: 'POST',
         headers: {
+            'Authorization': `Bearer ${access}`,
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-            'access': access,
             'question': question.textContent,
             'answer': answer.value,
             'correct': distinction,
@@ -44,6 +44,7 @@ function nextquiz() {
     fetch('http://13.209.138.142:8000/quiz/chat/', {
         method: 'GET',
         headers: {
+            'Authorization': `Bearer ${access}`,
             'Content-Type': 'application/json',
         }
     })
